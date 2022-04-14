@@ -1,7 +1,5 @@
 const title = document.querySelector(".hello h1");
 
-console.dir(title);
-
 function handleMouseEnter() {
     title.style.color = "darkturquoise";
     title.innerText = "Mouse is here";
