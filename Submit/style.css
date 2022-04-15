@@ -1,0 +1,19 @@
+body {
+    background-color: antiquewhite;
+}
+
+.hello h1 {
+    color: white;
+}
+
+.smallColor{
+    background-color: tomato;
+}
+
+.middleColor{
+    background-color: blueviolet;
+}
+
+.bigColor {
+    background-color: blue;
+}

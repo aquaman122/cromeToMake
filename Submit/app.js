@@ -1,27 +1,22 @@
 const title = document.querySelector(".hello h1");
 
-function handleMouseEnter() {
-    title.style.color = "darkturquoise";
-    title.innerText = "Mouse is here";
+
+function handleInnerWidth(){
+    const bigColor = "bigColor";
+    const middleColor = "middleColor";
+    const SmallColor = "smallColor";
+       if (window.innerWidth < 700){
+       document.body.classList.add(SmallColor);
+       document.body.classList.remove(middleColor);
+       document.body.classList.remove(bigColor);
+   }
+   else if (window.innerWidth < 1200){
+       document.body.classList.add(middleColor);
+       document.body.classList.remove(bigColor);
+   }
+   else if(window.innerWidth < 1700){
+       document.body.classList.add(bigColor);
+   }
 }
 
-function handleMouseLeave() {
-    title.innerText = "Mouse is gone";
-    title.style.color = "cornflowerblue";
-}
-
-function handleOnContextmenu() {
-    title.innerText = "That was a right click!";
-    title.style.color = "maroon";
-}
-
-function handleOnResize() {
-    title.innerText = "you just resized!";
-    title.style.color = "darkorchid";
-}
-
-
-title.addEventListener("mouseenter",handleMouseEnter);
-title.addEventListener("mouseleave",handleMouseLeave);
-window.addEventListener("contextmenu",handleOnContextmenu);
-window.addEventListener("resize",handleOnResize);
+window.addEventListener("resize",handleInnerWidth);
